@@ -15,6 +15,10 @@
         </div>
         <div v-if="selects" class="selects">
             <h1>SELECTS go here</h1>
+            <BaseSelect 
+            :options="selects"
+            label="Select One"/>
+
         </div>
         <div v-if="textAreas" class="selects">
             <h1>TEXT AREAS go here</h1>
@@ -28,6 +32,7 @@
         <div v-if="checks" class="selects">
             <h1>CHECK BOXES go here</h1>
         </div>
+
     </div><!--end div form  -->
 </div>
     
@@ -36,9 +41,10 @@
 <script>
 
 import BaseInput from './BaseInput.vue';
+import BaseSelect from './BaseSelect.vue';
 export default {
     name: 'TheForm',
-    components: { BaseInput },
+    components: { BaseInput, BaseSelect },
     data: function(){
         return{
             theInputs: this.inputs
