@@ -5,6 +5,7 @@
        :inputs="inputs" 
        :selects="selects"
        :textAreas="textAreas"/>
+
         
     </div>
 </template>

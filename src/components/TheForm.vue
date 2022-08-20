@@ -39,7 +39,7 @@
         <div v-if="checks" class="selects">
             <h1>CHECK BOXES go here</h1>
         </div>
-
+    <BaseButton label="Submit" class="btn btn-primary"/>
     </div><!--end div form  -->
 </div>
     
@@ -50,12 +50,14 @@
 import BaseInput from './BaseInput.vue';
 import BaseSelect from './BaseSelect.vue';
 import BaseTextArea from './BaseTextArea.vue';
+import BaseButton from './BaseButton.vue';
 export default {
     name: 'TheForm',
-    components: { BaseInput, BaseSelect, BaseTextArea },
+    components: { BaseInput, BaseSelect, BaseTextArea, BaseButton },
     data: function(){
         return{
-            theInputs: this.inputs
+            theInputs: this.inputs,
+            
         }
     },
     props: {
