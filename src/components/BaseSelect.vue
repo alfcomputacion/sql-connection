@@ -1,7 +1,9 @@
 <template>
     <div class="container">
-        <label for="id">{{label}}</label>
-        <select :id="id"
+        <label  for="id">{{label}}</label>
+        <select 
+            :id="id"
+            :theClass="theClass"
             :value="theVal"
             @input="$emit('update:modelValue', $event.target.value)">
             <option 
@@ -23,9 +25,9 @@ export default {
     props: {
         id: String,
         theClass: String,
-        label: String,
         theVal: String,
-        options: Array
+        options: Array,
+        label: String
         
     }
 }

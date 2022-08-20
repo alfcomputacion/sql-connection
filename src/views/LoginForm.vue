@@ -3,9 +3,10 @@
 
        <TheForm 
        :inputs="inputs" 
-       :selects="selects"/>
+       :selects="selects"
+       :textAreas="textAreas"/>
         
-        </div>
+    </div>
 </template>
 <script>
 
@@ -65,9 +66,19 @@ export default {
             ['Two','2'],
             ['Three','3'],
             ['Four','4'],
-            ['Five','5'],
+            ['Five','5']
         ],
-        textAreas: [],
+      
+        textAreas: [
+            {
+                label: 'Message',
+                name: 'message',
+                id: 'msg-login',
+                cols: 30,
+                rows: 10,
+                theClass: ''
+            }
+        ],
         buttons: []
     }
     }

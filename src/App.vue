@@ -36,9 +36,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color:white;
+  background: #2c3e50;
 }
-
+body{
+  background: #3c464f;
+}
 nav {
   padding: 30px;
 }
@@ -50,5 +53,8 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #ffffff;
+}
+label{
+  padding-right: 1rem;
 }
 </style>

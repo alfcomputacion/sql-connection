@@ -2,6 +2,15 @@
 <div class="container">
     <div class="form">
         <h1>LOG IN</h1>
+        <div v-if="selects" class="selects">
+            <h1>SELECTS go here</h1>
+            <BaseSelect
+            id="select-number" 
+            class="col"
+            :options="selects"
+            label="Select One"/>
+
+        </div>
         <div v-if="inputs" class="inputs">
         <BaseInput 
             v-for="input in inputs" 
@@ -13,15 +22,13 @@
             :theVal="input[0].theVal"
             :placeholder="input[0].placeholder"  />
         </div>
-        <div v-if="selects" class="selects">
-            <h1>SELECTS go here</h1>
-            <BaseSelect 
-            :options="selects"
-            label="Select One"/>
-
-        </div>
-        <div v-if="textAreas" class="selects">
+        <div v-if="textAreas" class="text-areas">
             <h1>TEXT AREAS go here</h1>
+            <BaseTextArea 
+            :label="textAreas[0].label"
+            />
+        
+
         </div>
         <div v-if="buttons" class="selects">
             <h1>BUTTONS go here</h1>
@@ -42,9 +49,10 @@
 
 import BaseInput from './BaseInput.vue';
 import BaseSelect from './BaseSelect.vue';
+import BaseTextArea from './BaseTextArea.vue';
 export default {
     name: 'TheForm',
-    components: { BaseInput, BaseSelect },
+    components: { BaseInput, BaseSelect, BaseTextArea },
     data: function(){
         return{
             theInputs: this.inputs
