@@ -1,8 +1,7 @@
 <template>
 <div class="row">
-    <div class="form-group col-12 mx-auto">
-
-        <label :for="id">{{label}}</label>
+    <div class="form-group col-6 mx-auto">
+        <label class="float-left ml-3" :for="id">{{label}}</label>
         <textarea 
         :name="name" 
         :id="id" 
@@ -26,3 +25,11 @@ export default {
     }
 }
 </script>
+<style scoped>
+    textarea{
+ 
+        width: 95%;
+        border-radius: 7px;
+    }
+
+</style>
