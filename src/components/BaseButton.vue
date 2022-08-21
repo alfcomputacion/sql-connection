@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-12 text-center p-2">
+        <div class="col-6 text-center p-4 mx-auto">
         <button 
             :class="theClass">
             {{label}}

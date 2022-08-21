@@ -4,7 +4,8 @@
        <TheForm 
        :inputs="inputs" 
        :selects="selects"
-       :textAreas="textAreas"/>
+       :textAreas="textAreas"
+       :radioButtons="radioButtons"/>
 
         
     </div>
@@ -80,7 +81,11 @@ export default {
                 theClass: ''
             }
         ],
-        buttons: []
+        buttons: [],
+        radioButtons:[
+            [{type: 'radio', name: 'sex', id: 'female', label: 'Women' }],
+            [{type: 'radio', name: 'sex', id: 'male', label: 'Men' }],
+        ]
     }
     }
 }

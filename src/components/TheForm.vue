@@ -30,7 +30,7 @@
         
 
         </div>
-        <div v-if="buttons" class="selects">
+        <div v-if="radioButtons" class="radio-buttons">
             <h1>BUTTONS go here</h1>
         </div>
         <div v-if="radios" class="selects">
@@ -39,7 +39,16 @@
         <div v-if="checks" class="selects">
             <h1>CHECK BOXES go here</h1>
         </div>
-    <BaseButton label="Submit" class="btn btn-primary"/>
+        <BaseRadioButton 
+            v-for="radio in radioButtons" 
+            :key="radio"
+            :type="radio[0].type" 
+            :name="radio[0].name" 
+            :id="radio[0].id" 
+            :label="radio[0].label" />
+            <!-- <BaseRadioButton type="radio" name="rad" id="radio-button" label="rb1"/>
+            <BaseRadioButton type="radio" name="rad" id="radio-button2" label="rb2"/> -->
+    <BaseButton label="Submit" theClass="form-control btn btn-primary"/>
     </div><!--end div form  -->
 </div>
     
@@ -51,9 +60,11 @@ import BaseInput from './BaseInput.vue';
 import BaseSelect from './BaseSelect.vue';
 import BaseTextArea from './BaseTextArea.vue';
 import BaseButton from './BaseButton.vue';
+import BaseRadioButton from './BaseRadioButton.vue';
+
 export default {
     name: 'TheForm',
-    components: { BaseInput, BaseSelect, BaseTextArea, BaseButton },
+    components: { BaseInput, BaseSelect, BaseTextArea, BaseButton, BaseRadioButton },
     data: function(){
         return{
             theInputs: this.inputs,
@@ -64,7 +75,8 @@ export default {
         inputs: Array,
         selects: Array,
         textAreas: Array,
-        buttons: Array
+        buttons: Array,
+        radioButtons: Array
     }
 }
 </script>
