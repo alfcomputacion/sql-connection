@@ -45,7 +45,8 @@
             :type="radio[0].type" 
             :name="radio[0].name" 
             :id="radio[0].id" 
-            :label="radio[0].label" />
+            :label="radio[0].label"
+            :error="radio[0].error" />
             <!-- <BaseRadioButton type="radio" name="rad" id="radio-button" label="rb1"/>
             <BaseRadioButton type="radio" name="rad" id="radio-button2" label="rb2"/> -->
     <BaseButton label="Submit" theClass="form-control btn btn-primary"/>

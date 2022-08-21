@@ -83,8 +83,8 @@ export default {
         ],
         buttons: [],
         radioButtons:[
-            [{type: 'radio', name: 'sex', id: 'female', label: 'Women' }],
-            [{type: 'radio', name: 'sex', id: 'male', label: 'Men' }],
+            [{type: 'radio', name: 'sex', id: 'female', label: 'Women',error:'error' }],
+            [{type: 'radio', name: 'sex', id: 'male', label: 'Men', error: 'error' }],
         ]
     }
     }
